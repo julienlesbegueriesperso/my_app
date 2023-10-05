@@ -11,7 +11,7 @@ function App() {
     <Box>
       <AppBar position='sticky'>
         <Toolbar>
-          <IconButton><Home></Home></IconButton>
+          <IconButton onClick={() => setCounter(0)}><Home></Home></IconButton>
           <Typography sx={{textTransform:'uppercase'}}>My App</Typography>
         </Toolbar>
       </AppBar>
