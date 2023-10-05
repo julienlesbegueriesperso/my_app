@@ -3,6 +3,7 @@ import { Home } from '@mui/icons-material';
 import { AppBar, Box, IconButton, Toolbar, Typography } from '@mui/material';
 import { useState } from 'react';
 import './App.css';
+import MyFlow from './MyFlow';
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -19,6 +20,7 @@ function App() {
         <Typography variant="h1">{counter}</Typography>
         <Button onClick={() => setCounter(counter+1)}>Add One</Button>
         <Button onClick={() => setCounter(0)}>Re-init</Button>
+        <MyFlow name='my name'></MyFlow>
       </Box>
     </Box>
   );
