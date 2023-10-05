@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Button } from '@mui/base';
+import { Home } from '@mui/icons-material';
+import { AppBar, Box, IconButton, Toolbar, Typography } from '@mui/material';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [counter, setCounter] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      <AppBar position='sticky'>
+        <Toolbar>
+          <IconButton><Home></Home></IconButton>
+          <Typography sx={{textTransform:'uppercase'}}>My App</Typography>
+        </Toolbar>
+      </AppBar>
+      <Box p="25px">
+        <Typography variant="h1">{counter}</Typography>
+        <Button onClick={() => setCounter(counter+1)}>Add One</Button>
+        <Button onClick={() => setCounter(0)}>Re-init</Button>
+      </Box>
+    </Box>
   );
 }
 
